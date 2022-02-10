@@ -8,6 +8,7 @@ Created on Tue Sep 29 13:08:27 2020
 
 import igor.binarywave as ibw           # https://pypi.org/project/igor/
 import glob 
+import matplotlib.pyplot as plt
 
 filelist = glob.glob('*.ibw')  
 
@@ -26,3 +27,11 @@ for file in filelist:
             notedic[item.split(':')[0]] = item.split(':')[1]
         except: 
             print("Warrning cannot parse note entry: " + item)
+
+
+plt.figure()
+plt.plot(data['ZSnsr'],data['Amp'])
+         
+
+plt.figure()
+plt.plot(data['ZSnsr'],data['Phase'])
