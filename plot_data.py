@@ -8,4 +8,10 @@ Created on Thu Feb 17 10:25:16 2022
 
 import matplotlib.pyplot as plt 
 
-plt.figure() 
+
+def makeplot(data): 
+    plt.figure()
+    for key in data.keys():
+        plt.plot(data[key]['Amp'],data[key]['Phase'])         
+
+    

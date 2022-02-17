@@ -7,31 +7,36 @@ Created on Tue Sep 29 13:08:27 2020
 
 
 import igor.binarywave as ibw           # https://pypi.org/project/igor/
-import glob 
-import matplotlib.pyplot as plt
-
-filelist = glob.glob('*.ibw')  
+#import glob 
 
 
-for file in filelist: 
-    indata = ibw.load(file)
+#filelist = glob.glob('*.ibw')  
+
+def gen_data(filelist): 
+    
     data = {}
     
-    
-    for key in enumerate(indata['wave']['labels'][1][1:]):     
-        data[str(key[1])[2:-1]] = indata['wave']['wData'][:,key[0]]
+    for file in filelist: 
+        indata = ibw.load(file)
+        file = file.split('\\')[1]
+
         
-    notedic = {}
-    for item in str(indata['wave']['note']).split('\\r'):
-        try: 
-            notedic[item.split(':')[0]] = item.split(':')[1]
+        try:  
+            data[file[0:-4]] 
         except: 
-            print("Warrning cannot parse note entry: " + item)
+            data[file[0:-4]] = {}
+        
+        for key in enumerate(indata['wave']['labels'][1][1:]):     
+            data[file[0:-4]][str(key[1])[2:-1]] = indata['wave']['wData'][:,key[0]]
+            
+        notedic = {}
+        for item in str(indata['wave']['note']).split('\\r'):
+            try: 
+                notedic[item.split(':')[0]] = item.split(':')[1]
+            except: 
+                print("Warrning cannot parse note entry: " + item)
+        
+        data[file[0:-4]]['note'] = notedic
+        
 
-
-plt.figure()
-plt.plot(data['ZSnsr'],data['Amp'])
-         
-
-plt.figure()
-plt.plot(data['ZSnsr'],data['Phase'])
+    return(data)     
