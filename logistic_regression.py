@@ -1,16 +1,20 @@
-#Logistic Regression 
+# -*- coding: utf-8 -*- 
+"""
+Created on Thu Mar 10 09:50:17 2022
+
+@author: arjun
+"""
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
-#import import_data.py
 import igor.binarywave as ibw           # https://pypi.org/project/igor/
 import glob 
 
-#from sklearn import metrics
+
 
 #%%
 
@@ -78,13 +82,31 @@ plt.tight_layout()
 
 #%%
 
+model = LogisticRegression(solver='liblinear', random_state=0)
 
-# dataset = pd.read_csv('')
-# dataset.head()
-# import_data_py(['Material used','AFM y_value'])
+count = 1 
+plt.figure()
+for key1 in data.keys(): 
+    plt.subplot(2,1,count) 
+    plt.title(key1)
+    for key2 in data[key1].keys():
+        
+        
+        x_train = [data[key1][key2]['ZSnsr'],data[key1][key2]['Amp']]
+        y_train = [1]
+        
+        
+        output = model.fit(x_train, y_train)
+    
+    
+    count = count + 1
 
-# x_train, x_test, y_train, y_test = train_test_split(dataset[['z distance']], y, test_size = 1, random_state = 0)
+plt.tight_layout()
 
+# x_train = data['Off_Surface']['AZ_0101']['ZSnsr']
+# y_train = data['Off_Surface']['AZ_0101']['Amp']
+
+# for 
 
 # y= np.arrange
 
@@ -103,7 +125,7 @@ plt.tight_layout()
 # cnf_m = confusion_matrix(y, pred_data)
 # report = classification_report(y, pred_data)
 
-# print(classification_report(y, model.predict_proba(x_train)))
+#print(classification_report(y, model.predict_proba(x_train)))
 
 # plt.tight_layout()
 # plt.title('AFM')
@@ -111,5 +133,3 @@ plt.tight_layout()
 # plt.ylabel('Contact made or not')
 # plt.legend()
 # plt.show()
-
-
