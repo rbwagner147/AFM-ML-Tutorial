@@ -24,7 +24,7 @@ Python 3.0
 ## 3. Organizing into Directory
 ## 4. Training Logistic Regression
 ## 5. Testing Logistic Regression 
-### Plotting Graph 
+## 6. Results Visualization  
 
 ## How to use this Tutorial
 
@@ -46,48 +46,4 @@ I'll link the "main fork" from here.
 
 Arjun Gupta (gupta568@purdue.edu)
 Ryan B Wagner (rbwagner@purdue.edu)
-
-
-
-
-
-# 1. Importing Basic Functions
-
-## Theory
-
-This tutorial requires primarily all the basic functions needed by a mathematical alogrithm. These include the NumPy library, Matplotlib and math libraries. Furthemore, the logistic regression tools require the Scikit-Learn library. 
-
-
-
-
-
-```python
-
-```
-
-# 2. Importing Data Files
-
-## Theory
-
-We need to import data 
-
-
-
-```python
-
-```
-
-# 3. Organizing Files into Directory
-
-## Theory
-
-Keys are specified in dictionaries to reference specific file names. Here we create two keys: Key 1: whether file is On SUrface or Off Surface file, Key 2: Specific file name 
-
-Higher level
-
-
-
-```python
-
-```
 
