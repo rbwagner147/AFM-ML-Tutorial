@@ -17,15 +17,6 @@ Anaconda Navigator
 Python 3.0
 
 
-# Table of Contents
-
-## 1. Import Basic Functions
-## 2. Import Data 
-## 3. Organizing into Directory
-## 4. Training Logistic Regression
-## 5. Testing Logistic Regression 
-## 6. Results Visualization  
-
 ## How to use this Tutorial
 
 1. Make sure you have all the required pre-requisities written above.
