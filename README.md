@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------
 ## Application of Logistic Regression on AFM Data to classify surface contact 
 
-This is a tutorial showing an example of applying logistic regression on AFM to classify them into two categories based on whether the AFM tip has made contact with the material surface or not.  
+This is a tutorial showing an example of applying logistic regression on AFM dynamic AZ curves to classify them into two categories based on whether the AFM tip has made contact with the material surface or not.  
 
 
 # Basic Information
@@ -12,9 +12,9 @@ The tutorial uses Juypter Notebook for  publishing its documentation.
 
 # Prerequisites 
 
-A GitHub account
-Anaconda Navigator 
-Python 3.0
+1. A GitHub account
+2. Anaconda Navigator 
+3. Python 3.0
 
 
 ## How to use this Tutorial
@@ -30,10 +30,9 @@ Python 3.0
 ## Contributing 
 
 Please feel free to contribute ideas to further improve this tutorial. 
-Pull requests 
-I'll link the "main fork" from here.
+You are free to pull the code and suggest any changes 
 
-## Author
+## Authors
 
 Arjun Gupta (gupta568@purdue.edu)
 Ryan B Wagner (rbwagner@purdue.edu)
