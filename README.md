@@ -12,8 +12,6 @@ The tutorial uses Juypter Notebook for  publishing its documentation.
 
 # Prerequisites 
 
-1. A GitHub account
-2. Anaconda Navigator 
 3. Python 3.0
 
 
